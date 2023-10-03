@@ -1,0 +1,42 @@
+<Page x:Class="Pract_5.Pages.AttacheEventsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Pract_5.Pages"
+      mc:Ignorable="d"
+      Title="AttacheEventsPage" Height="450" Width="800">
+    <Grid Margin="0 20px 0 0" Background="Linen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="14px" Content="Прикреплённые события:"/>
+        <GroupBox Grid.Column="0" Grid.Row="1" Header="Radio Buttons" Margin="20px 0">
+            <StackPanel Margin="0 20px">
+                <RadioButton Content="Text 1" FontSize="14" Checked="RadioButton_Checked" />
+                <RadioButton Content="Text 2" FontSize="14" Checked="RadioButton_Checked" />
+                <RadioButton Content="Text 3" FontSize="14" Checked="RadioButton_Checked" />
+                <RadioButton Content="Text 4" FontSize="14" Checked="RadioButton_Checked" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Grid.Row="2" Header="ComboBox" Margin="20px 0">
+            <StackPanel Margin="0 20px" VerticalAlignment="Center">
+                <Label Content="Select the text:"/>
+                <ComboBox Name="TextComboBox" SelectionChanged="TextComboBox_SelectionChanged">
+                    <ComboBoxItem  Content="Text 1"/>
+                    <ComboBoxItem Content="Text 2"/>
+                    <ComboBoxItem Content="Text 3"/>
+                    <ComboBoxItem Content="Text 4"/>
+                </ComboBox>
+            </StackPanel>
+        </GroupBox>
+        <TextBlock Name="TextBlockTop" Grid.Row="1" Grid.Column="1" Background="White"/>
+        <TextBlock Name="TextBlockBottom" Grid.Row="2" Grid.Column="1" Background="White"/>
+    </Grid>
+</Page>
